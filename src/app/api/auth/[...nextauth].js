@@ -7,9 +7,9 @@ export const authOptions = {
   providers: [
     GoogleProvider({
       // @ts-ignore
-      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
       // @ts-ignore
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
     })
   ],
 };
