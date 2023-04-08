@@ -25,7 +25,7 @@ function Navbar() {
       | React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) {
     event.preventDefault();
-    signIn();
+    signIn("google");
     // if (session) {
     //   addUser({email: session.user?.email, isSubscribed: false, })
     // }
@@ -92,12 +92,33 @@ function Navbar() {
             </button>
           </div>
         ) : (
-          <button
-            type='button'
-            className='flex  items-center gap-[12px] rounded-md bg-yellow-400  py-1 px-6 font-normal text-slate-800'
-            onClick={(event) => handleLogin(event)}>
-            Generate
-          </button>
+          <div className='flex justify-between items-center'>
+            <p className='text-white mx-4'>Login</p>
+            <button
+              type='button'
+              className='flex  items-center gap-[12px] rounded-full bg-yellow-400  py-1 px-2 font-normal text-slate-800'
+              onClick={(event) => handleLogin(event)}>
+              <Image
+                height={30}
+                width={30}
+                src='/google.svg'
+                className='stroke-black'
+                alt='google logo'
+              />
+            </button>
+            <button
+              type='button'
+              className='flex mx-3 items-center gap-[12px] rounded-full bg-yellow-400  py-1 px-2 font-normal text-slate-800'
+              onClick={(event) => handleLogin(event)}>
+              <Image
+                height={30}
+                width={30}
+                src='/instagram.svg'
+                className='stroke-black text-black'
+                alt='google logo'
+              />
+            </button>
+          </div>
         )}
       </div>
     </nav>

@@ -3,8 +3,8 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { SessionProvider } from "next-auth/react";
-import { Poppins } from "next/font/google";
-import {Analytics} from '@vercel/analytics/react';
+import { Poppins, Pacifico } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -15,10 +15,9 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body
-        className={`overflow-x-hidden bg-primary-black min-h-screen ${poppins.className}`}
-      >
+        className={`overflow-x-hidden bg-primary-black min-h-screen ${poppins.className}`}>
         <SessionProvider>
           <Navbar />
           {children}

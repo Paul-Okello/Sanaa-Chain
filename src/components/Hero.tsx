@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 
 import styles from "@/app/styles/styles";
 import { slideIn, staggerContainer, textVariant } from "@/utils/motion";
+import { Poppins, Merienda } from "next/font/google";
+const merienda = Merienda({ subsets: ["latin"], weight: ["400"] });
 
 const Hero = () => (
-  <section className={`${styles.yPaddings} pl-6 sm:pl-16`}>
+  <section className={`${styles.yPaddings} pl-6 sm:pl-16 `}>
     <motion.div
       //@ts-ignore
       variants={staggerContainer}
@@ -14,9 +16,11 @@ const Hero = () => (
       whileInView='show'
       viewport={{ once: true, amount: 0.25 }}
       className={`${styles.innerWidth} mx-auto flex flex-col`}>
-      <div className='relative z-10 flex flex-col items-center justify-center'>
-        <motion.h1 variants={textVariant(1.1)} className={styles.heroHeading}>
-          SanaaChain
+      <div className='relative z-10 flex flex-col items-center justify-center mx-3'>
+        <motion.h1
+          variants={textVariant(1.1)}
+          className={`${styles.heroHeading} ${merienda.className} my-4`}>
+          SAnaaChain
         </motion.h1>
       </div>
 
